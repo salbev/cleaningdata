@@ -65,3 +65,4 @@ allinMS$activityId <- activitylabelsin[allinMS$activityId, 2]
 summary <- allinMS%>%
         group_by(subjectId, activityId) %>%
         summarise_all(funs(mean)) 
+write.table(summary, "summary.txt", row.name=FALSE)
